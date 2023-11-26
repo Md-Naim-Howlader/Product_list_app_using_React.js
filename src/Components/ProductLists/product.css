@@ -1,16 +1,20 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
-
+.ProductContainer {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    grid-column-gap: 20px;
+}
 table {
     border: 1px solid #2c3e50;
     border-collapse: collapse;
     font-family: 'Open Sans', sans-serif;
-    max-width: 100%;
     overflow-x: auto;
 }
 th, td {
     border: 2px solid #2c3e50;
-    padding: 4px 10px;
+    padding: 5px;
     text-align: center;
    
 }
@@ -19,7 +23,7 @@ table th {
     
 }
 .product {
-    max-width: 100%;
+ 
     background: #fff;
     padding: 20px;
     border-radius: 12px;
@@ -28,9 +32,7 @@ table th {
 }
 
 /* Add new comment */
-.form-data {
-    width: 600px;
-}
+
 .inputFlex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

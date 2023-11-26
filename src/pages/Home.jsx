@@ -16,17 +16,10 @@ const Home = () => {
 
   return (
     <ProductContext.Provider value={{ products, setProducts }}>
-      <div className="container">
-        <h1 style={{ textAlign: "center", margin: "10px" }}>Product List</h1>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <FormData />
-        </div>
+      <h1 style={{ textAlign: "center", margin: "10px" }}>Product List</h1>
+
+      <div className="ProductContainer">
+        <FormData />
         <ProductsTable />
       </div>
     </ProductContext.Provider>
