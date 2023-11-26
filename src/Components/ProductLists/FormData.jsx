@@ -83,9 +83,7 @@ const FormData = () => {
               id="color"
             >
               <option>Choose Color</option>
-              <option value="Black" selected>
-                Black
-              </option>
+              <option value="Black">Black</option>
               <option value="Blue">Blue</option>
               <option value="Marron">Marron</option>
               <option value="Gray">Gray</option>
@@ -102,9 +100,7 @@ const FormData = () => {
               id="size"
             >
               <option>Choose Size</option>
-              <option value="S" selected>
-                S
-              </option>
+              <option value="S">S</option>
 
               <option value="M">M</option>
               <option value="L">L</option>
@@ -114,24 +110,16 @@ const FormData = () => {
           </div>
 
           <div className="quantity">
-            <label htmlFor="quantity">Select Quantity</label>
-            <select
-              required
-              onChange={(e) => setQuantity(e.target.value)}
+            <label htmlFor="quantity">Enter Quantity</label>
+            <input
+              min="0"
+              max="20"
               value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
+              type="number"
               name="quantity"
               id="quantity"
-            >
-              <option>Choose</option>
-              <option value="0" selected>
-                0
-              </option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
+            />
           </div>
           <div>
             <label htmlFor="price">Price</label>

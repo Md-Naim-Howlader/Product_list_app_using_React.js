@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
 .ProductContainer {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 100%;
     width: 100%;
     grid-column-gap: 20px;
 }
@@ -97,3 +97,9 @@ table th {
 
 }
 
+
+@media screen and (min-width: 992px) {
+    .ProductContainer {
+       grid-template-columns: 30% 70%;
+    }
+}
