@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "productName": "T-shirt",
+        "color": "indigo",
+        "size": "XL",
+        "productId": "iu5s7b7rd13",
+        "price": "750",
+        "quantity": "2",
+        "description": "Giudicio potra non ammirabile se potra. Apparire beato grazia per alcun sí da. Il sua temporali che esser pieno con."
+    },
+    
+    {
+        "id": 2,
+        "productName": "Hoodie",
+        "color": "Black",
+        "size": "XL",
+        "productId": "iu55527rd13",
+        "price": "2350",
+        "quantity": "1" ,
+        "description": "Made monastic of did was but from where his, friends thence some caught him and to, with friends ere childe."
+    }
+    
+]

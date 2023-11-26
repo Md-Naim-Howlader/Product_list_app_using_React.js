@@ -1,0 +1,97 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+table {
+    border: 1px solid #2c3e50;
+    border-collapse: collapse;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+    overflow-x: auto;
+}
+th, td {
+    border: 2px solid #2c3e50;
+    padding: 4px 10px;
+    text-align: center;
+   
+}
+table th {
+    background: #ecf0f1;
+    
+}
+.product {
+    max-width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-x: auto;
+}
+
+/* Add new comment */
+.form-data {
+    width: 600px;
+}
+.inputFlex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+}
+.form-data {
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form-data > h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.form-data form input ,
+.form-data form select
+{
+    display: block;
+    width: 100%;
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 2px solid #16a085;
+    margin-bottom: 10px;
+}
+
+.form-data form textarea {
+    display: block;
+    width: 100%;
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 2px solid #16a085;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+    background: transparent;
+}
+.form-data form input:focus,
+.form-data form textarea:focus
+ {
+    background-color: #ecf0f1;
+}
+.form-data form button[type=submit] {
+    background: #1abc9c;
+    padding: 12px 13px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.form-dataform button[type=submit]:hover {
+    background: #16a085;
+
+}
+
