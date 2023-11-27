@@ -4,6 +4,8 @@ import { ProductContext } from "../../Context/ProductContext";
 
 const Product = ({ product }) => {
   const { products, setProducts } = useContext(ProductContext);
+
+  // destructure products
   const {
     productName,
     productType,

@@ -2,43 +2,43 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../../Context/ProductContext";
 
 const FormData = () => {
-  const [productName, setProductName] = useState("");
-  const [productType, setProductType] = useState("");
-  const [color, setColor] = useState("");
-  const [size, setSize] = useState("");
-  const [price, setPrice] = useState(0);
-  const [quantity, setQuantity] = useState(0);
-  const [description, setDescription] = useState("");
-
+  // use context api
   const { products, setProducts } = useContext(ProductContext);
-  // clear products data
-  const clearProductsInput = () => {
-    setProductName("");
-    setColor("");
-    setSize("");
-    setPrice(0);
-    setQuantity(0);
-    setDescription("");
+
+  const [productsInput, setProductsInput] = useState({
+    productName: "",
+    productType: "",
+    color: "",
+    size: "",
+    price: "",
+    quantity: "",
+    description: "",
+    productId: new Date().getTime(),
+  });
+
+  // destructure productsInput
+
+  const {
+    productName,
+    productType,
+    color,
+    size,
+    price,
+    quantity,
+    description,
+  } = productsInput;
+
+  // handleChange
+  const handleChange = (e) => {
+    const fieldName = e.target.name;
+    setProductsInput({ ...productsInput, [fieldName]: e.target.value });
   };
 
   // handle add products
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const newAddProduct = {
-      productName,
-      productType,
-      color,
-      size,
-      price,
-      quantity,
-      description,
-      productId: new Date().getTime(),
-    };
-    setProducts([...products, newAddProduct]);
-
-    // clear inputs
-    clearProductsInput();
+    setProducts([...products, productsInput]);
   };
   return (
     <div className="form-data">
@@ -48,7 +48,7 @@ const FormData = () => {
             <label htmlFor="productName">Product Name:</label>
             <input
               required
-              onChange={(e) => setProductName(e.target.value)}
+              onChange={handleChange}
               value={productName}
               type="text"
               name="productName"
@@ -60,7 +60,7 @@ const FormData = () => {
             <select
               required
               value={productType}
-              onChange={(e) => setProductType(e.target.value)}
+              onChange={handleChange}
               name="productType"
               id="productType"
             >
@@ -78,7 +78,7 @@ const FormData = () => {
             <select
               required
               value={color}
-              onChange={(e) => setColor(e.target.value)}
+              onChange={handleChange}
               name="color"
               id="color"
             >
@@ -94,7 +94,7 @@ const FormData = () => {
             <label htmlFor="size">Select Size:</label>
             <select
               required
-              onChange={(e) => setSize(e.target.value)}
+              onChange={handleChange}
               value={size}
               name="size"
               id="size"
@@ -115,7 +115,7 @@ const FormData = () => {
               min="0"
               max="20"
               value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
+              onChange={handleChange}
               type="number"
               name="quantity"
               id="quantity"
@@ -124,7 +124,7 @@ const FormData = () => {
           <div>
             <label htmlFor="price">Price</label>
             <input
-              onChange={(e) => setPrice(e.target.value)}
+              onChange={handleChange}
               value={price}
               min="100"
               max="5000"
@@ -139,9 +139,9 @@ const FormData = () => {
           <textarea
             required
             minLength={20}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={handleChange}
             value={description}
-            name=""
+            name="description"
             id="description"
           ></textarea>
         </div>
