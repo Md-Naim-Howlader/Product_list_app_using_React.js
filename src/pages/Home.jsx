@@ -21,7 +21,6 @@ const Home = () => {
       <div className="ProductContainer">
         <FormData />
         <ProductsTable />
-
       </div>
     </ProductContext.Provider>
   );
