@@ -39,6 +39,16 @@ const FormData = () => {
     e.preventDefault();
 
     setProducts([...products, productsInput]);
+    setProductsInput({
+      productName: "",
+      productType: "",
+      productId: "",
+      color: "",
+      size: "",
+      price: "",
+      quantity: "",
+      description: "",
+    });
   };
   return (
     <div className="form-data">
@@ -112,7 +122,7 @@ const FormData = () => {
           <div className="quantity">
             <label htmlFor="quantity">Enter Quantity</label>
             <input
-              min="0"
+              min="1"
               max="20"
               value={quantity}
               onChange={handleChange}
