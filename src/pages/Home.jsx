@@ -21,6 +21,7 @@ const Home = () => {
       <div className="ProductContainer">
         <FormData />
         <ProductsTable />
+        <button onClick={() => setProducts([])}>Remove All</button>
       </div>
     </ProductContext.Provider>
   );
