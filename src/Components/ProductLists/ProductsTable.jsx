@@ -32,6 +32,7 @@ const ProductsTable = () => {
               ))}
           </tbody>
         </table>
+        <button onClick={() => setProducts([])}>Remove All</button>
       ) : (
         <div>
           {" "}
