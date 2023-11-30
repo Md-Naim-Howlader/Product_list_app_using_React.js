@@ -79,8 +79,8 @@ const FormData = () => {
                 Men's Wear
               </option>
               <option value="Women's Wear">Women's Wear</option>
-              <option value="Kids Wer">Kids Waer</option>
-              <option value="New Born">New Born Wear</option>
+              <option value="Kids Wear">Kids Wear</option>
+              <option value="New Born Baby Wear">New Born Wear</option>
             </select>
           </div>
           <div>
